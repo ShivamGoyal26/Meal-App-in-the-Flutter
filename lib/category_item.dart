@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dummy_data.dart';
 
 class CategoryItem extends StatelessWidget {
   final String title;
@@ -12,12 +11,13 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(20),
+      margin: const EdgeInsets.all(10),
       child: Text(title),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            color.withOpacity(0.7),
+            color.withOpacity(0.1),
             color,
           ],
           begin: Alignment.topLeft,
