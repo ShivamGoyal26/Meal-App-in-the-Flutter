@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
               title: TextStyle(
                 fontSize: 15,
                 fontFamily: 'OpenSans',
-                fontWeight: FontWeight.bold, 
+                fontWeight: FontWeight.bold,
               ),
             ),
       ),
@@ -30,6 +30,13 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => CategoriesScreen(),
         CategoryMealScreen.routeName: (ctx) => CategoryMealScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen()
+      },
+      // onGenerateRoute: (settings) {
+      //   print(settings.arguments);
+      //   return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+      // },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
       },
     );
   }
